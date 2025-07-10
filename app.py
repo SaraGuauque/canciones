@@ -15,11 +15,11 @@ CORS(app, resources={
         "allow_headers": ["Content-Type"]
     }
 })
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///songs.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL) .replace("postgres://", "postgresql://")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'tu-clave-secreta-aqui-12345'
 
-db.init_app(app)
+db.SQLAlchemy(app)
 
 with app.app_context():
     db.create_all()
