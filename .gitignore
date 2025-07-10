@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Database
+*.db
+*.sqlite
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Static files (si ya están incluidos en el repositorio)
+/static/uploads/
